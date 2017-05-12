@@ -491,6 +491,8 @@ function createConfigPanel(cpanel) {
     subpanel.setAttribute('class', "subpanel");
     subpanel.appendChild(ButtonBox('Sauvegarde', 'Télécharger', 'window.open(\'loadstore.php\',\'olcc_params\',\'width=0,height=0\')'), subpanel)
     subpanel.appendChild(FileBox('Chargement', 'Envoyer', 'loadstore.php', 'removeEvent(window, \'unload\', onUnload, false);'), subpanel)
+    subpanel.innerHTML += '<p><a href="cookies.php">Sauvegarde sur serveur</a><p>';
+    
     panel.appendChild(subpanelwrapper);
 }
 
