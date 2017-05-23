@@ -114,13 +114,8 @@
   </div>
 
   <div id="balltrap" style="cursor:crosshair;position:absolute;left:-50px;top:50px;width:32px;height:32px;overflow:hidden;z-index:1000"><img style="position:relative" src="img/coincoin.gif" /></div>
-  
-  <div style="visibility:hidden; position: absolute;left: 0px;top: 450px;z-index: -199;">
-    <audio controls="controls" id="myFlash">
-    <source src="sound/duck.mp3" type="audio/mp3" />
-    Votre navigateur n'est pas compatible
-    </audio>
-  </div>
+
+  <audio id="player" onended="sound_ended()" style="display:none">Notifications</audio>
 
 </body>
 
