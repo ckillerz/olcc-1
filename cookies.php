@@ -129,10 +129,9 @@ function compute_secret_filename($user, $pwd)
         'cost' => 12,
         'salt' => COOK_SALT,
     ];
-    $pwd = password_hash($pwd, PASSWORD_BCRYPT, $options);
-    $user = password_hash($user, PASSWORD_BCRYPT, $options);
-    $res = '.ht' . md5($pwd  . $user) . '.db';
-    echo COOK_STORE_PATH.$res;
+    $pwd_c = password_hash($pwd, PASSWORD_BCRYPT, $options);
+    $user_c = password_hash($user, PASSWORD_BCRYPT, $options);
+    $res = '.ht' .$user . md5($pwd_c  . $user_c) . '.db';
     return COOK_STORE_PATH.$res;
 }
 
